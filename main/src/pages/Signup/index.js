@@ -10,13 +10,13 @@ const Signup = () => {
       <table>
         <tr>
           <th>Name</th>
-          <th>Username</th>
+          <th>Phone Number</th>
         </tr>
         {users?.map((item, ind) => {
           return (
             <tr key={ind}>
-              <td>{item?.name}</td>
-              <td>{item?.username}</td>
+              <td>{item.name}</td>
+              <td>{item.phone}</td>
             </tr>
           );
         })}
