@@ -1,0 +1,21 @@
+@import 'reset';
+
+body {
+    font-size: 16px;
+    color: green;
+}
+h2 {
+    font-size: 38px;
+}
+h3 {
+    font-size: 32px;
+}
+
+table {
+    td,
+    th {
+        border: 1px solid #000;
+        padding: 8px 20px;
+        font-size: 20px;
+    }
+}
