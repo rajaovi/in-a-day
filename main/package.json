@@ -13,6 +13,7 @@
     "react-scripts": "5.0.1",
     "redux": "^5.0.1",
     "redux-thunk": "^3.1.0",
+    "sass": "^1.77.8",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
@@ -43,6 +44,7 @@
     "eslint": "^8.57.0",
     "eslint-config-prettier": "^9.1.0",
     "eslint-plugin-prettier": "^5.2.1",
+    "node-sass": "^7.0.3",
     "prettier": "^3.3.3"
   },
   "lint": "eslint .",
