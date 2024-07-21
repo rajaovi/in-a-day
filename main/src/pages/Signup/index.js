@@ -59,7 +59,7 @@ const Signup = () => {
         <p>
           <label>Phone Number</label>
           <Input
-            inputType="phone"
+            inputType="number"
             inputReqired={true}
             value={userPhoneNumber}
             inputPlaceholder="Enter Phone Number"
