@@ -1,21 +1,40 @@
 import React from 'react';
-import { useSelector } from 'react-redux';
+// import { useSelector } from 'react-redux';
 import { useState } from 'react';
 import Input from '../../components/input';
 
 const Signup = () => {
+  // const users = useSelector((state) => state.Test.users);
   const [firstName, setFirstName] = useState('');
-  const [secondName, setSecondName] = useState('');
+  const [lastName, setLastName] = useState('');
   const [userName, setUserName] = useState('');
   const [userEmail, setUserEmail] = useState('');
   const [userPhoneNumber, setUserPhoneNumber] = useState('');
   const [userPassword, setUserPassword] = useState('');
-  const users = useSelector((state) => state.Test.users);
-  console.log('Users', users);
+  const [formData, setFormData] = useState([]);
+  // console.log('Users', users);
+  console.log('formData', formData);
+
+  const handleSignUpForm = (e) => {
+    e.preventDefault();
+    const userFormData = [
+      {
+        firstName: firstName,
+        lastName: lastName,
+        userName: userEmail,
+        userEmail: userEmail,
+        userPhoneNumber: userPhoneNumber,
+        userPassword: userPassword
+      }
+    ];
+    setFormData(userFormData);
+    console.log('Here', userFormData);
+  };
+
   return (
     <div>
       <h2>Signup - API User Test</h2>
-      <form>
+      <form onSubmit={handleSignUpForm}>
         <p>
           <label>First Name</label>
           <Input
@@ -31,9 +50,9 @@ const Signup = () => {
           <Input
             inputType="text"
             inputReqired={true}
-            value={secondName}
+            value={lastName}
             inputPlaceholder="Enter Last Name"
-            onChangeInput={setSecondName}
+            onChangeInput={setLastName}
           />
         </p>
         <p>
