@@ -13,10 +13,10 @@ const Signup = () => {
   const [userPassword, setUserPassword] = useState('');
   const [formData, setFormData] = useState([]);
   // console.log('Users', users);
-  console.log('formData', formData);
 
   const handleSignUpForm = (e) => {
     e.preventDefault();
+    console.log('Fordata', formData);
     const userFormData = [
       {
         firstName: firstName,
