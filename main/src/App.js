@@ -2,8 +2,8 @@ import './App.css';
 import { useDispatch } from 'react-redux';
 import { useEffect } from 'react';
 import { getAllPosts } from './store/Actions/TestAction';
-import Signup from './pages/Signup';
 import './styles/_common.scss';
+import RoutePage from './routes';
 
 function App() {
   const dispatch = useDispatch();
@@ -14,7 +14,7 @@ function App() {
 
   return (
     <div className="App">
-      <Signup />
+      <RoutePage />
     </div>
   );
 }
