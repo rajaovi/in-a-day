@@ -1,6 +1,6 @@
-import React from 'react';
+import React, { useState } from 'react';
 // import { useSelector } from 'react-redux';
-import { useState } from 'react';
+import { useNavigate } from 'react-router-dom';
 import Input from '../../components/input';
 
 const Signup = () => {
@@ -12,6 +12,9 @@ const Signup = () => {
   const [userPhoneNumber, setUserPhoneNumber] = useState('');
   const [userPassword, setUserPassword] = useState('');
   const [formData, setFormData] = useState([]);
+
+  const navigate = useNavigate();
+
   // console.log('Users', users);
 
   const handleSignUpForm = (e) => {
@@ -28,6 +31,7 @@ const Signup = () => {
       }
     ];
     setFormData(userFormData);
+    navigate('/');
     console.log('Here', userFormData);
   };
 
