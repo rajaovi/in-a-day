@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import Input from '../../components/input';
+import Button from '../../components/button';
 
 const Signin = () => {
   const [userName, setUserName] = useState('');
@@ -42,8 +43,13 @@ const Signin = () => {
           />
         </p>
         <div>
-          <button onClick={handleSignin}>Login</button>
-          <button onClick={handleSignup}>Signup</button>
+          <Button text="Sigin" btnSize="primary" btnColor="blue" handleButtonClick={handleSignin} />
+          <Button
+            text="Signup"
+            btnSize="primary"
+            btnColor="grey"
+            handleButtonClick={handleSignup}
+          />
         </div>
       </form>
     </div>
