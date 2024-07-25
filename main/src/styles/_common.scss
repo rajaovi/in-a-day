@@ -19,3 +19,33 @@ table {
         font-size: 20px;
     }
 }
+
+.button {
+    border-radius: 8px;
+    border-width: 0;
+    cursor: pointer;
+    display: inline-block;
+    font-family: "Haas Grot Text R Web", "Helvetica Neue", Helvetica, Arial, sans-serif;
+    list-style: none;
+    margin: 0;
+    padding: 8px 12px;
+    margin: 5px;
+    text-align: center;
+    transition: all 200ms;
+    vertical-align: baseline;
+    white-space: nowrap;
+    touch-action: manipulation;
+    &.primary {
+        font-size: 15px;
+        font-weight: 400;
+        line-height: 20px;
+    }
+    &.blue {
+        background-color: rgb(14 160 225);
+        color: #fff;
+    }
+    &.grey {
+        background-color: rgb(83, 83, 83);
+        color: #fff;
+    }
+}

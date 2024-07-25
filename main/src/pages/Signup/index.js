@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 // import { useSelector } from 'react-redux';
 import { useNavigate } from 'react-router-dom';
 import Input from '../../components/input';
+import Button from '../../components/button';
 
 const Signup = () => {
   // const users = useSelector((state) => state.Test.users);
@@ -17,8 +18,7 @@ const Signup = () => {
 
   // console.log('Users', users);
 
-  const handleSignUpForm = (e) => {
-    e.preventDefault();
+  const handleSignUpForm = () => {
     console.log('Fordata', formData);
     const userFormData = [
       {
@@ -31,8 +31,8 @@ const Signup = () => {
       }
     ];
     setFormData(userFormData);
-    navigate('/');
     console.log('Here', userFormData);
+    navigate('/');
   };
 
   return (
@@ -100,7 +100,12 @@ const Signup = () => {
           />
         </p>
         <p>
-          <button>Sumbit</button>
+          <Button
+            text="Submit"
+            btnSize="primary"
+            btnColor="blue"
+            handleButtonClick={handleSignUpForm}
+          />
         </p>
       </form>
     </div>
