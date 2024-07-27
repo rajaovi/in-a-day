@@ -4,12 +4,12 @@ import Input from '../../components/input';
 import Button from '../../components/button';
 
 const Signin = () => {
+  const navigate = useNavigate();
   const [userName, setUserName] = useState('');
   const [password, setPassword] = useState('');
-  const navigate = useNavigate();
 
   const handleSignin = () => {
-    if (userName !== '' && password !== '') {
+    if (userName && password) {
       navigate('/dashbaord');
     }
   };

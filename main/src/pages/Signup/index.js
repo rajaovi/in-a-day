@@ -31,8 +31,10 @@ const Signup = () => {
       }
     ];
     setFormData(userFormData);
-    console.log('Here', userFormData);
-    navigate('/');
+    if (firstName && lastName && userName && userEmail && userPhoneNumber && userPassword) {
+      console.log('Here', userFormData);
+      navigate('/');
+    }
   };
 
   return (
