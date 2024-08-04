@@ -1,7 +1,8 @@
 import React from 'react';
 
 const Button = ({ text, btnSize, btnColor, handleButtonClick }) => {
-  const handleButton = () => {
+  const handleButton = (e) => {
+    e.preventDefault();
     handleButtonClick();
   };
   return (
