@@ -13,9 +13,6 @@ const Signin = () => {
   const [showPasswordError, setPasswordError] = useState(false);
 
   const handleSignin = () => {
-    if (userName && password) {
-      navigate('/dashbaord');
-    }
     if (userName == '') {
       setShowUserError(true);
     } else {
@@ -25,6 +22,9 @@ const Signin = () => {
       setPasswordError(true);
     } else {
       setPasswordError(false);
+    }
+    if (userName && password) {
+      navigate('/dashbaord');
     }
   };
 
