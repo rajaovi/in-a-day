@@ -1,5 +1,9 @@
 import React, { useState } from 'react';
 
+const defaultProps = {
+  onChangeInput: () => {}
+};
+
 const Input = ({
   inputType,
   inputName,
@@ -9,14 +13,17 @@ const Input = ({
   onBlurInput
 }) => {
   const [inputValue, setInputValue] = useState('');
+  // Define default props for the child component
+
   const handleInput = (e) => {
+    e.preventDefault();
     const inputVar = e.target.value;
     // const inputName = e.target.name;
     setInputValue(inputVar);
     onChangeInput(e);
   };
-  const handleBlur = () => {
-    onBlurInput();
+  const handleBlur = (e) => {
+    onBlurInput(e);
   };
   return (
     <input
@@ -30,5 +37,8 @@ const Input = ({
     />
   );
 };
+
+// Set default props
+Input.defaultProps = defaultProps;
 
 export default Input;
